@@ -4,6 +4,7 @@ import { TeamService } from '../../services/team.service';
 @Component({
   selector: 'app-team-list',
   templateUrl: './team-list.component.html',
+  styleUrls: ['./team-list.component.css']
 })
 export class TeamListComponent implements OnInit {
   teams: any[] = [];
@@ -27,7 +28,7 @@ export class TeamListComponent implements OnInit {
 
   createTeam(name: string) {
     this.teamService.createTeam(name).subscribe(() => {
-      this.loadTeams(); // Refresh the team list
+      //this.loadTeams(); // Refresh the team list
     });
   }
 }

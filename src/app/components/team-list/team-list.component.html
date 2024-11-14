@@ -1,14 +1,16 @@
 <div>
     <h2>Team List</h2>
     <form (submit)="createTeam(teamName.value); teamName.value=''">
-      <input #teamName type="text" placeholder="Enter team name" required />
-      <button type="submit">Add Team</button>
+      <mat-form-field appearance="fill">
+        <mat-label>Input Label</mat-label>
+        <input #teamName type="text" matInput placeholder="Enter team name"  required />
+      </mat-form-field>
+      <button  mat-raised-button color="primary" type="submit">Add Team</button>
     </form>
-  
-    <ul>
-      <li *ngFor="let team of teams">
+    <mat-list class="mat-list">
+      <mat-list-item *ngFor="let team of teams" class="mat-list-item">
         {{ team.name }}
-      </li>
-    </ul>
+        <a [routerLink]="['/teams', team.id]">Voir les détails de l'équipe</a>
+      </mat-list-item>
+    </mat-list>
   </div>
-  
