@@ -28,7 +28,7 @@ export class TeamListComponent implements OnInit {
 
   createTeam(name: string) {
     this.teamService.createTeam(name).subscribe(() => {
-      //this.loadTeams(); // Refresh the team list
+      this.loadTeams(); // Refresh the team list
     });
   }
 }

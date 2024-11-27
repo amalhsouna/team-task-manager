@@ -1,7 +1,29 @@
-<div *ngIf="team">
-    <h2>{{ team.name }}</h2>
-    <!-- Affichez d'autres détails si nécessaire -->
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Détails d'une équipe</h1>
+  
+  <!-- Affichage des détails de l'équipe -->
+  <div *ngIf="team" class="card shadow">
+    <div class="card-header bg-primary text-white">
+      <h2 class="card-title">Title: <span style="font-weight: 200;">{{ team.name }}</span></h2>
+    </div>
+    <div class="card-body">
+      <h3 class="h5">List of tasks :</h3>
+      <ul class="list-group list-group-flush">
+        <li *ngFor="let task of team.tasks" class="list-group-item">
+          <strong>{{ task.title }}</strong>: {{ task.description }}
+        </li>
+      </ul>
+    </div>
+    <button mat-raised-button color="primary" (click)="openTaskForm()">Ajouter une tâche</button>
   </div>
-  <div *ngIf="!team">
+  <app-task-form-dialog
+  *ngIf="showTaskFormDialog"
+  [teamId]="team.id"
+  (taskAdded)="onTaskAdded($event)">
+  </app-task-form-dialog>
+
+  <!-- Message si l'équipe n'est pas trouvée -->
+  <div *ngIf="!team" class="alert alert-warning text-center mt-4">
     <p>Équipe non trouvée.</p>
   </div>
+</div>

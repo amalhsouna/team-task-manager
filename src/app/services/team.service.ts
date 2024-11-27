@@ -5,14 +5,14 @@ import { Observable } from 'rxjs';
 export interface Team {
   id: number;
   name: string;
-  task: any;
+  tasks: any;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class TeamService {
-  private apiUrl = 'http://127.0.0.1:5000/teams';  // Adjust as necessary
+  private apiUrl = 'http://127.0.0.1:5000/api/teams';  // Adjust as necessary
 
   constructor(private http: HttpClient) {}
 

@@ -1,0 +1,27 @@
+form {
+  display: flex;
+  flex-direction: column; /* Aligns the form fields vertically */
+  gap: 16px; /* Adds vertical spacing between fields */
+  padding: 16px; /* Adds padding around the form */
+}
+
+mat-form-field {
+  width: 100%; /* Ensures fields take the full available width */
+  margin-bottom: 16px; /* Adds spacing below each field */
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end; /* Aligns buttons to the right */
+  gap: 8px; /* Adds spacing between the buttons */
+}
+
+mat-dialog-title {
+  font-size: 1.5rem; /* Sets the font size for the title */
+  margin-bottom: 16px; /* Adds spacing between the title and the form */
+  text-align: center; /* Centers the title */
+}
+
+button {
+  min-width: 100px; /* Sets a minimum width for buttons */
+}

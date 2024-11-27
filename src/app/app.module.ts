@@ -11,14 +11,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
 import { TeamDetailComponent } from './components/team-detail/team-detail.component';
+import { FormsModule } from '@angular/forms';
+import { TaskFormDialogComponent } from './components/task-form-dialog/task-form-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TeamListComponent,
     TaskListComponent,
-    TeamDetailComponent
+    TeamDetailComponent,
+    TaskFormDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +33,8 @@ import { TeamDetailComponent } from './components/team-detail/team-detail.compon
     MatInputModule,
     MatListModule,
     MatIconModule,
+    FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

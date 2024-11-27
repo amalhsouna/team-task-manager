@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Ajouter une tâche</h2>
+<form >
+  <mat-form-field appearance="fill">
+    <h1>Titre de la tâche</h1>
+    <input matInput [(ngModel)]="newTask.title" name="title" required />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <h1>Description</h1>
+    <textarea matInput [(ngModel)]="newTask.description" name="description"></textarea>
+  </mat-form-field>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Annuler</button>
+    <button mat-raised-button color="primary" type="submit" (click)="addTask()">Ajouter</button>
+  </div>
+</form>

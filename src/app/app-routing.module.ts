@@ -4,9 +4,9 @@ import { TeamDetailComponent } from './components/team-detail/team-detail.compon
 import { TeamListComponent } from './components/team-list/team-list.component';
 
 const routes: Routes = [
-  { path: 'teams', component: TeamListComponent },
-  { path: 'teams/:id', component: TeamDetailComponent }, 
   { path: '', redirectTo: '/teams', pathMatch: 'full' },
+  { path: 'teams', component: TeamListComponent },
+  { path: 'api/teams/:id', component: TeamDetailComponent }, 
 ];
 
 
