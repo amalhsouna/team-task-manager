@@ -20,10 +20,10 @@ export class TaskFormDialogComponent{
       return;
     }
 
-    const task = { ...this.newTask, teamId: this.teamId }; // add id of team to task
-    console.log(this.teamId)
+    const task = { ...this.newTask }; // add id of team to task
+    console.log(task);
     //call api task (add task to team)
-    this.taskService.addTaskToTeam(this.teamId, task).subscribe(
+    this.taskService.addTaskToTeam(task, this.teamId).subscribe(
       (response) => {
         this.taskAdded.emit(task); // send task to parent
         this.newTask = { title: '', description: '' }; // Resetting the form

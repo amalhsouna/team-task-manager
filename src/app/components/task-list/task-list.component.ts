@@ -20,7 +20,7 @@ export class TaskListComponent implements OnInit {
   }
 
   createTask(title: string, description: string) {
-    this.taskService.addTaskToTeam(this.teamId, []).subscribe(() => {
+    this.taskService.addTaskToTeam([], this.teamId).subscribe(() => {
       this.ngOnInit(); // Refresh the task list
     });
   }
