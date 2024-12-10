@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/teams', pathMatch: 'full' },
   { path: 'teams', component: TeamListComponent },
   { path: 'api/teams/:id', component: TeamDetailComponent }, 
+  { path: '**', redirectTo: '/home', pathMatch: 'full' } //wildCard route
 ];
 
 

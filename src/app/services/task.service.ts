@@ -14,7 +14,7 @@ export class TaskService {
     return this.http.get(`${this.apiUrl}/${teamId}/tasks`);
   }
 
-  addTaskToTeam(teamId: number | undefined, task: any): Observable<any> {
+  addTaskToTeam(task: any, teamId: number | undefined): Observable<any> {
     return this.http.post(`${this.apiUrl}/${teamId}/tasks`, task);
   }
 }

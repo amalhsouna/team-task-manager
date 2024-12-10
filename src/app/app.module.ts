@@ -15,6 +15,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { TeamDetailComponent } from './components/team-detail/team-detail.component';
 import { FormsModule } from '@angular/forms';
 import { TaskFormDialogComponent } from './components/task-form-dialog/task-form-dialog.component';
+import { CapitalizePipe } from './pipe/capitalize.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TaskFormDialogComponent } from './components/task-form-dialog/task-form
     TeamListComponent,
     TaskListComponent,
     TeamDetailComponent,
-    TaskFormDialogComponent
+    TaskFormDialogComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,
